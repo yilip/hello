@@ -3,6 +3,7 @@ package com.lip.hello.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import com.lip.hello.service.ITestService;
 
 @Controller
 public class HelloController {
+	@Resource
 	private ITestService testService;
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)

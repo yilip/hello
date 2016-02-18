@@ -162,10 +162,6 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.lip</groupId>
-			<artifactId>hello-core</artifactId>
-		</dependency>
 	</dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -182,13 +178,4 @@
         </plugins>
 	</build>
 	<groupId>com.lip</groupId>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.lip</groupId>
-				<artifactId>hello-core</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 </project>
