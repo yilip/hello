@@ -18,11 +18,21 @@ import com.lip.hello.service.ITestService;
 @Controller
 public class HelloController {
 	@Resource
+<<<<<<< HEAD
+=======
+	private IUserService userService;
+	@Resource
+>>>>>>> 198a5971c26eaf21e5ba58cf808d705e9f69bb8c
 	private ITestService testService;
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public @ResponseBody Map<String, Object> sayHello(HttpServletRequest request) {
 		Map<String, Object> resultMap = new HashMap<>();
+<<<<<<< HEAD
+=======
+		User user=userService.getUser("10000216");
+		resultMap.put("name", user.getAgentId());
+>>>>>>> 198a5971c26eaf21e5ba58cf808d705e9f69bb8c
 		resultMap.put("name", testService.getName());
 		resultMap.put("msg", true);
 		return resultMap;
