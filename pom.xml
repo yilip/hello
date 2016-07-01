@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>hello</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>hello Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -15,7 +15,18 @@
 		<slf4j.version>1.7.7</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
 	</properties>
-
+   <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>first Project SNAPSHOTS</name>
+            <url>http://localhost:9091/nexus/content/repositories/snapshots</url>
+        </snapshotRepository> 
+        <repository>
+            <id>nexus-releases</id>
+            <name>first Project Release</name>
+            <url>http://localhost:9091/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
